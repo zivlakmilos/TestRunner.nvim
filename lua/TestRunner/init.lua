@@ -11,9 +11,9 @@ function M.run_test()
 	local command = nil
 
 	if extension == "lua" then
-		command = "call jobsend(b:terminal_job_id, \"nvim --headless -c 'PlenaryBustedDirectory tests'\"\n)"
+		command = "call jobsend(b:terminal_job_id, \"nvim --headless -c 'PlenaryBustedDirectory tests'\\n\")"
 	elseif extension == "javascript" or extension == "typescript" then
-		command = 'call jobsend(b:terminal_job_id, "npm run test\n")'
+		command = 'call jobsend(b:terminal_job_id, "npm run test \\n")'
 	end
 
 	if command then
